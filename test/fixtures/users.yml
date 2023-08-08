@@ -1,0 +1,6 @@
+user:
+  username: gimli
+  password_digest: <%= BCrypt::Password.create('tolkien-abercrombie-hobb-barker', cost: 5) %>
+  first_name: Gimli
+  last_names: son of Glóin
+  email: gimli@example.com
