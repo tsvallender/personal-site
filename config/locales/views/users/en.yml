@@ -1,0 +1,5 @@
+en:
+  users:
+    new:
+      register: Register
+      welcome: Welcome

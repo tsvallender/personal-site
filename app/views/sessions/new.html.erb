@@ -1,0 +1,11 @@
+<%= t ".log_in" %>
+
+<%= form_with url: sessions_path, method: :post do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit t(".log_in") %>
+<% end %>
