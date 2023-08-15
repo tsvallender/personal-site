@@ -2,5 +2,4 @@ en:
   sessions:
     logged_in: You’ve been logged in.
     login_fail: Sorry, we couldn’t log you in.
-    destroy:
-      logged_out: You have been logged out.
+    logged_out: You have been logged out.

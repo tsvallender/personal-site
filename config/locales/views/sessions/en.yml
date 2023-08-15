@@ -2,5 +2,3 @@ en:
   sessions:
     new:
       log_in: Log in
-    destroy:
-      logged_out: You have been logged out
