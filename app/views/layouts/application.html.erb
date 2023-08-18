@@ -27,9 +27,9 @@
       </nav>
     </header>
     <main>
-      <% flash.each do |type, msg| %>
-        <div class="flash">
-          <%= "#{type}: #{msg}" %>
+      <% flash.each do |type, message| %>
+        <div class="flash <%= type %>">
+          <%= message %>
         </div>
       <% end %>
       <%= yield %>

@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to @user, notice: t(".logged_in")
     else
-      redirect_to root_path, notice: t(".login_fail")
+      redirect_to root_path, alert: t(".login_fail")
     end
   end
 
