@@ -12,5 +12,9 @@ module SummonPlayer
     config.load_defaults 7.0
 
     config.time_zone = "London"
+
+    config.action_view.field_error_proc = proc do |html_tag, _instance|
+      html_tag.gsub(/<(\w*) /, '<\1 class="field_with_errors"').html_safe
+    end
   end
 end

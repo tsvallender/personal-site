@@ -1,0 +1,23 @@
+  <%= form_with model: user, id: "user_form" do |f| %>
+    <h2><%= title %></h2>
+
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+
+    <%= f.label :last_names %>
+    <%= f.text_field :last_names %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+
+    <%= f.submit button_text %>
+  <% end %>

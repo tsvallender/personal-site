@@ -3,3 +3,7 @@ en:
     new:
       register: Register
       welcome: Welcome
+    edit:
+      edit: Edit
+    show:
+      edit_user_details: Edit your account details

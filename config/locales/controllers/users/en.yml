@@ -1,3 +1,5 @@
 en:
   users:
     account_created: Account created!
+    account_updated: Your details have been updated.
+    update_failed: Could not update your details.

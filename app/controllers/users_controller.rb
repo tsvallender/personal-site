@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  before_action :set_user, only: [:edit, :update, :show]
+
   def new
     @user = User.new
   end
@@ -16,11 +18,28 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
+  def edit
+    head :forbidden and return unless @user == helpers.current_user
+  end
+
+  def update
     @user = User.find_by(username: params[:id])
+    if @user.update(user_params)
+      redirect_to @user, notice: t(".account_updated")
+    else
+      flash.now.alert = t(".update_failed")
+      render :edit
+    end
+  end
+
+  def show
   end
 
   private
+
+  def set_user
+    @user = User.find_by(username: params[:id])
+  end
 
   def user_params
     params.require(:user).permit(

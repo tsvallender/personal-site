@@ -1,0 +1,12 @@
+<%= turbo_stream.replace "flash_wrapper" do %>
+  <%= render "shared/flash" %>
+<% end %>
+
+<%= turbo_stream.replace "user_form" do %>
+  <%= render partial: "form",
+             locals: {
+               user: @user,
+               button_text: t(".edit"),
+               title: t(".edit"),
+             } %>
+<% end %>
