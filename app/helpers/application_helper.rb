@@ -8,4 +8,10 @@ module ApplicationHelper
   def current_user
     @current_user ||= User.find(session[:user_id]) if logged_in?
   end
+
+  def update_flash
+    turbo_stream.replace "flash_wrapper" do
+      render "shared/flash"
+    end
+  end
 end

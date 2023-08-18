@@ -1,7 +1,6 @@
 <% @title = "Edit account details" %>
-<%= turbo_stream.replace "flash_wrapper" do %>
-  <%= render "shared/flash" %>
-<% end %>
+
+<%= update_flash %>
 
 <%= turbo_stream.replace "user_form" do %>
   <%= render partial: "form",

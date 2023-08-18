@@ -1,7 +1,6 @@
 <% @title = "Log in" %>
-<%= turbo_stream.replace "flash_wrapper" do %>
-  <%= render "shared/flash" %>
-<% end %>
+
+<%= update_flash %>
 
 <%= turbo_stream.replace "session_form" do %>
   <%= form_with url: sessions_path, method: :post, id: "session_form" do |f| %>
