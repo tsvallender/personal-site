@@ -12,7 +12,9 @@
 
   <body>
     <header>
-      <h1>Summon Player</h1>
+      <%= link_to root_path do %>
+        <h1>Summon Player</h1>
+      <% end %>
       <nav>
         <ul>
           <li><%= link_to t("home"), root_path %></li>
