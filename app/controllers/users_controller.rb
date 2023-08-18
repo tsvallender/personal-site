@@ -14,6 +14,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: t(".account_created")
     else
+      flash.now.alert = t(".create_failed")
       render :new
     end
   end
