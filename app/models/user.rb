@@ -17,4 +17,12 @@ class User < ApplicationRecord
             format: { with: /\A.*@.*\..*\z/ } # Only very basic regex
 
   validates :password, confirmation: true
+
+  def to_param
+    username
+  end
+
+  def full_name
+    "#{first_name} #{last_names}"
+  end
 end
