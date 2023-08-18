@@ -1,5 +1,5 @@
 <% @title = "Log in" %>
-<%= form_with url: sessions_path, method: :post do |f| %>
+<%= form_with url: sessions_path, method: :post, id: "session_form" do |f| %>
   <h2><%= t ".log_in" %></h2>
 
   <%= f.label :username %>
