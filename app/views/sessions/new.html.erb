@@ -1,6 +1,6 @@
-<%= t ".log_in" %>
-
 <%= form_with url: sessions_path, method: :post do |f| %>
+  <h2><%= t ".log_in" %></h2>
+
   <%= f.label :username %>
   <%= f.text_field :username %>
 
