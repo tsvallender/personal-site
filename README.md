@@ -1,24 +1,18 @@
-# README
+# Summon Player
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Summon player is a lightweight digital helper for tabletop games. It is designed
+for use in a few situations:
+- To use for theatre of the mind games alongside a video call platform
+- To use alongside a platform such as Owlbear Rodeo
+- For Play-by-Post games
+- To manage in-person games
 
-Things you may want to cover:
+# Development environment
 
-* Ruby version
+Uses [devenv](https://devenv.sh). If you wish to run outside of this you should
+still be able to use `devenv.nix` as documentation of what is required.
 
-* System dependencies
+# Deployment
 
-* Configuration
+The plan is to use MRSK for deployment.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
