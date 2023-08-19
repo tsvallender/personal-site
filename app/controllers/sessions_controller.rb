@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       redirect_to @user, notice: t(".logged_in")
     else
       flash.now.alert = t(".login_fail")
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

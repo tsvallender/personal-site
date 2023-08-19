@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       redirect_to root_path, notice: t(".account_created")
     else
       flash.now.alert = t(".create_failed")
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
       redirect_to @user, notice: t(".account_updated")
     else
       flash.now.alert = t(".update_failed")
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
