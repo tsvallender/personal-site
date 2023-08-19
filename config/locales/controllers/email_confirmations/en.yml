@@ -1,0 +1,4 @@
+en:
+  email_confirmations:
+    email_confirmed: Thanks, your email has been confirmed.
+    email_confirmation_failed: Sorry, we could not confirm your email.

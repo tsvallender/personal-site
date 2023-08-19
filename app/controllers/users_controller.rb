@@ -10,7 +10,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      # TODO: Add email confirmation workflow
       session[:user_id] = @user.id
       redirect_to root_path, notice: t(".account_created")
     else

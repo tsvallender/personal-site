@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "securerandom"
+
 class User < ApplicationRecord
   has_secure_password
 
@@ -26,6 +28,8 @@ class User < ApplicationRecord
             presence: true,
             if: :validate_password?
 
+  after_create :require_confirmation
+
   def to_param
     username
   end
@@ -34,7 +38,16 @@ class User < ApplicationRecord
     "#{first_name} #{last_names}"
   end
 
+  def requires_confirmation?
+    email_confirmation_string.present?
+  end
+
   private
+
+  def require_confirmation
+    update(email_confirmation_string: SecureRandom.uuid)
+    UserMailer.with(user: self).confirm_email.deliver_later
+  end
 
   def validate_password?
     new_record? || password_digest_changed?

@@ -4,3 +4,12 @@ user:
   first_name: Gimli
   last_names: son of Glóin
   email: gimli@example.com
+
+unconfirmed_user:
+  username: pippin
+  password_digest: <%= BCrypt::Password.create('tolkien-abercrombie-hobb-barker', cost: 5) %>
+  first_name: Peregrin
+  last_names: Took
+  email: pippin@example.com
+  email_confirmation_string: 5a68514b-7cd2-4ac8-bec1-22c2526f9a52
+

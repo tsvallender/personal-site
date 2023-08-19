@@ -1,6 +1,6 @@
 en:
   users:
     create_failed: Could not create user account, please correct the errors below.
-    account_created: Account created!
+    account_created: Account created! Please check your email to confirm.
     account_updated: Your details have been updated.
     update_failed: Could not update your details.

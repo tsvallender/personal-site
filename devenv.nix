@@ -25,4 +25,8 @@
       CREATE ROLE summon_player WITH LOGIN PASSWORD 'postgres' SUPERUSER;
     '';
   };
+
+  services.mailhog = {
+    enable = true;
+  };
 }

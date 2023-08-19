@@ -3,3 +3,4 @@ en:
     logged_in: You’ve been logged in.
     login_fail: Sorry, we couldn’t log you in.
     logged_out: You have been logged out.
+    account_not_confirmed: Please confirm your email to log in.
