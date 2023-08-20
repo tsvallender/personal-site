@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
   def create
     if @user.present? && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect_to @user, notice: t(".logged_in")
+      redirect_to root_path, notice: t(".logged_in")
     else
       flash.now.alert = t(".login_fail")
       render :new, status: :unprocessable_entity
