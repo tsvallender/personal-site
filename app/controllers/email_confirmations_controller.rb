@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class EmailConfirmationsController < ApplicationController
+  skip_before_action :require_login, only: [:confirm]
   def confirm
     @user = User.find_by(email: params[:email])
     if params[:confirmation_string] == @user.email_confirmation_string

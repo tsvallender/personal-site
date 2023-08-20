@@ -13,12 +13,12 @@
   <body>
     <header>
       <%= link_to root_path do %>
-        <h1>Summon Player</h1>
+        <h1><%= t("site_title") %></h1>
       <% end %>
       <nav>
         <ul>
-          <li><%= link_to t("home"), root_path %></li>
           <% if logged_in? %>
+            <li><%= link_to t("home"), root_path %></li>
             <li><%= link_to t("profile"), user_path(current_user) %></li>
             <li><%= link_to t("log_out"), log_out_path, data: { turbo_method: :delete } %></li>
           <% else %>

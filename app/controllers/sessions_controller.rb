@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class SessionsController < ApplicationController
+  skip_before_action :require_login, only: [:new, :create]
+
   before_action :set_user, only: [:create]
   before_action :ensure_email_confirmed, only: [:create]
 
