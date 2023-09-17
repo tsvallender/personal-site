@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @title.present? ? "#{@title} | #{t('site_title')}" : t("site_title") %></title>
+    <title><%= @title.present? ? "#{@title} | #{t('.site_title')}" : t(".site_title") %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -13,17 +13,18 @@
   <body>
     <header>
       <%= link_to root_path do %>
-        <h1><%= t("site_title") %></h1>
+        <h1><%= t(".site_title") %></h1>
       <% end %>
       <nav>
         <ul>
           <% if logged_in? %>
-            <li><%= link_to t("home"), root_path %></li>
-            <li><%= link_to t("profile"), user_path(current_user) %></li>
-            <li><%= link_to t("log_out"), log_out_path, data: { turbo_method: :delete } %></li>
+            <li><%= link_to t(".home"), root_path %></li>
+            <li><%= link_to t(".microposts"), microposts_path %></li>
+            <li><%= link_to t(".profile"), user_path(current_user) %></li>
+            <li><%= link_to t(".log_out"), log_out_path, data: { turbo_method: :delete } %></li>
           <% else %>
-            <li><%= link_to t("log_in"), new_session_path %></li>
-            <li><%= link_to t("register"), new_user_path %></li>
+            <li><%= link_to t(".log_in"), new_session_path %></li>
+            <li><%= link_to t(".register"), new_user_path %></li>
           <% end %>
         </ul>
       </nav>

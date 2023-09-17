@@ -8,9 +8,9 @@ class SessionsTest < ApplicationSystemTestCase
     visit new_session_path
     fill_in "username", with: user.username
     fill_in "password", with: "tolkien-abercrombie-hobb-barker"
-    click_button I18n.t("log_in")
+    click_button I18n.t("layouts.application.log_in")
     assert_text I18n.t("sessions.logged_in")
-    click_link I18n.t("log_out")
+    click_link I18n.t("layouts.application.log_out")
     assert_text I18n.t("sessions.logged_out")
   end
 
@@ -19,7 +19,7 @@ class SessionsTest < ApplicationSystemTestCase
     visit new_session_path
     fill_in "username", with: user.username
     fill_in "password", with: "tolkien-abercrombie-hobb-barker"
-    click_button I18n.t("log_in")
+    click_button I18n.t("layouts.application.log_in")
     assert_text I18n.t("sessions.account_not_confirmed")
   end
 end

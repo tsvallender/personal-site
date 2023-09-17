@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   # Users and sessions
   resources :users, only: [:new, :create, :show, :edit, :update]
-  resources :sessions, only: [:new, :create]
+  resources :sessions, only: [:index, :new, :create]
   delete "log_out", to: "sessions#destroy_session"
   get "confirm_email", to: "email_confirmations#confirm"
+
+  resources :microposts, only: [:index, :new, :create, :show]
 end

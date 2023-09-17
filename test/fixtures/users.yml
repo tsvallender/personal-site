@@ -1,3 +1,9 @@
+trevor:
+  username: tsvallender
+  password_digest: <%= BCrypt::Password.create('tolkien-abercrombie-hobb-barker', cost: 5) %>
+  first_name: Trevor
+  last_names: Vallender
+  email: t@tsvallender.co.uk
 user:
   username: gimli
   password_digest: <%= BCrypt::Password.create('tolkien-abercrombie-hobb-barker', cost: 5) %>

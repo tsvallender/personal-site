@@ -1,7 +1,10 @@
 en:
-  site_title: T S Vallender
-  home: Home
-  log_in: Log in
-  log_out: Log out
-  profile: Profile
-  register: Register
+  layouts:
+    application:
+      site_title: T S Vallender
+      home: Home
+      log_in: Log in
+      log_out: Log out
+      profile: Profile
+      register: Register
+      microposts: μposts

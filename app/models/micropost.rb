@@ -5,5 +5,4 @@ class Micropost < ApplicationRecord
   has_rich_text :content
 
   validates :user, presence: true
-  validates :content, presence: true
 end

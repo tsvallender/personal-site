@@ -1,4 +1,4 @@
 one:
-  record: some_text (Micropost)
+  record: one (Micropost)
   name: content
   body: <p>Just some text</p>

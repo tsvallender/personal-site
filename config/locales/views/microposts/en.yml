@@ -1,0 +1,9 @@
+en:
+  microposts:
+    index:
+      microposts: μposts
+      empty: You have no μposts yet.
+      new: New μpost
+    new:
+      create: Create μpost
+

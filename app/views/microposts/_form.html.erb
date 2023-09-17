@@ -1,0 +1,7 @@
+<%= form_with model: @micropost, id: "micropost_form" do |f| %>
+  <h2><%= title %></h2>
+
+  <%= f.rich_text_area :content %>
+
+  <%= f.submit button_text %>
+<% end %>
