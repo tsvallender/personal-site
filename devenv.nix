@@ -22,7 +22,7 @@
     enable = true;
     listen_addresses = "127.0.0.1";
     initialScript =  ''
-      CREATE ROLE summon_player WITH LOGIN PASSWORD 'postgres' SUPERUSER;
+      CREATE ROLE soc WITH LOGIN PASSWORD 'postgres' SUPERUSER;
     '';
   };
 

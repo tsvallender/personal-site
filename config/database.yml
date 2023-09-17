@@ -4,18 +4,18 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: summon_player
+  username: soc
 
 development:
   <<: *default
-  database: summon_player_development
+  database: soc_development
   password: postgres
 
 test:
   <<: *default
-  database: summon_player_test
+  database: soc_test
 
 production:
   <<: *default
-  database: summon_player_production
-  password: <%= ENV["SUMMON_PLAYER_DATABASE_PASSWORD"] %>
+  database: soc_production
+  password: <%= ENV["SOC_DATABASE_PASSWORD"] %>

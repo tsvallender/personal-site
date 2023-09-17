@@ -1,11 +1,9 @@
-# Summon Player
+# soc
 
-Summon player is a lightweight digital helper for tabletop games. It is designed
-for use in a few situations:
-- To use for theatre of the mind games alongside a video call platform
-- To use alongside a platform such as Owlbear Rodeo
-- For Play-by-Post games
-- To manage in-person games
+Soc (stream of consciousness) is a personal website platform for introverts. It is
+designed to run a blog as well as a microblog.
+
+This codebase is currently geared for my own site, but can be easily adapted.
 
 # Development environment
 
@@ -14,5 +12,5 @@ still be able to use `devenv.nix` as documentation of what is required.
 
 # Deployment
 
-The plan is to use MRSK for deployment.
+The plan is to use Kamal for deployment.
 
