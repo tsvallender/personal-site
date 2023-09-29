@@ -1,0 +1,55 @@
+service: soc
+
+image: tsvallender/soc
+
+traefik:
+  host_port: 8000
+
+servers:
+  - tsvallender.co.uk
+
+registry:
+  username: tsvallender
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+env:
+  clear:
+    APPLICATION_HOST: tsvallender.co.uk
+    DB_HOST: 172.17.0.2
+    RAILS_LOG_TO_STDOUT: true
+    RAILS_SERVE_STATIC_FILES: true
+  secret:
+    - RAILS_MASTER_KEY
+    - POSTGRES_PASSWORD
+
+ssh:
+  user: kamal
+
+builder:
+  args:
+    APPLICATION_HOST: tsvallender.co.uk
+    RUBY_VERSION: 3.2.2
+
+accessories:
+  postgres:
+    image: postgres:16
+    host: tsvallender.co.uk
+    env:
+      clear:
+        POSTGRES_USER: soc
+      secret:
+        - POSTGRES_PASSWORD
+    volumes:
+      - /srv/soc/data:/var/lib/postgresql/data
+    options:
+      ip: 172.17.0.2
+
+builder:
+  remote:
+    arch: arm64
+    host: ssh://kamal@tsvallender.co.uk
+
+healthcheck:
+  path: /sessions/new
+  port: 3000
