@@ -50,4 +50,5 @@ Rails.application.configure do
     address: "localhost",
     port: 1025,
   }
+  config.action_controller.raise_on_missing_callback_actions = true
 end
