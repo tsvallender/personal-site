@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
 class MicropostsController < ApplicationController
+  skip_before_action :require_login, only: [:index, :show]
   before_action :set_micropost, only: [:show]
 
   def index
-    @microposts = helpers.current_user.microposts
+    @microposts = Micropost.all
   end
 
   def new

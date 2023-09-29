@@ -4,6 +4,9 @@ image: tsvallender/soc
 
 traefik:
   host_port: 8000
+  args:
+    entryPoints.web.address: ':80'
+    entryPoints.web.forwardedHeaders.trustedIPs: 0.0.0.0/0
 
 servers:
   - tsvallender.co.uk

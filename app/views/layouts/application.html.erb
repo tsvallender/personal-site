@@ -17,14 +17,11 @@
       <% end %>
       <nav>
         <ul>
+          <li><%= link_to t(".home"), root_path %></li>
+          <li><%= link_to t(".microposts"), microposts_path %></li>
           <% if logged_in? %>
-            <li><%= link_to t(".home"), root_path %></li>
-            <li><%= link_to t(".microposts"), microposts_path %></li>
             <li><%= link_to t(".profile"), user_path(current_user) %></li>
             <li><%= link_to t(".log_out"), log_out_path, data: { turbo_method: :delete } %></li>
-          <% else %>
-            <li><%= link_to t(".log_in"), new_session_path %></li>
-            <li><%= link_to t(".register"), new_user_path %></li>
           <% end %>
         </ul>
       </nav>

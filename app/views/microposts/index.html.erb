@@ -1,6 +1,6 @@
 <h2><%= t(".microposts") %></h2>
 
-<%= link_to t(".new"), new_micropost_path %>
+<%= link_to t(".new"), new_micropost_path if logged_in? %>
 
 <% if @microposts.empty? %>
   <p><%= t(".empty") %></p>
