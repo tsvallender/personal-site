@@ -5,7 +5,7 @@ class MicropostsController < ApplicationController
   before_action :set_micropost, only: [:show]
 
   def index
-    @microposts = Micropost.all
+    @microposts = Micropost.all.order(created_at: :desc)
   end
 
   def new
