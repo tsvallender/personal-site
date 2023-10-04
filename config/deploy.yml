@@ -19,7 +19,7 @@ registry:
 env:
   clear:
     APPLICATION_HOST: tsvallender.co.uk
-    DB_HOST: 172.17.0.2
+    DB_HOST: soc-postgres
     RAILS_LOG_TO_STDOUT: true
     RAILS_SERVE_STATIC_FILES: true
   secret:
@@ -46,7 +46,7 @@ accessories:
     volumes:
       - /srv/soc/data:/var/lib/postgresql/data
     options:
-      ip: 172.17.0.2
+      ip: 172.17.0.5
 
 builder:
   remote:
