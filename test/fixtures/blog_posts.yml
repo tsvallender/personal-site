@@ -1,0 +1,11 @@
+published:
+  title: A published post
+  user: trevor
+  published: true
+  slug: published
+
+draft:
+  title: A draft post
+  user: trevor
+  published: false
+  slug: draft

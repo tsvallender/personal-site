@@ -2,3 +2,11 @@ one:
   record: one (Micropost)
   name: content
   body: <p>Just some text</p>
+published_blog_post:
+  record: published (BlogPost)
+  name: content
+  body: <p>Just some text</p>
+draft_blog_post:
+  record: draft (BlogPost)
+  name: content
+  body: <p>Just some text</p>
