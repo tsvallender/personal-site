@@ -2,6 +2,8 @@
 
 <%= link_to t(".new"), new_micropost_path if logged_in? %>
 
+<%= t(".intro_html") %>
+
 <% if @microposts.empty? %>
   <p><%= t(".empty") %></p>
 <% else %>

@@ -1,8 +1,8 @@
 :root {
   --border-color: gray;
   --highlight-color: #D36200;
-  --background-color: #CECECE;
-  --dark-background-color: #3A3A3A;
+  --background-color: #CCC;
+  --dark-background-color: #333;
   --inset-background-color: #FFFFFF;
   --alert-border-color: #800000;
   --form-error-color: #FF0000;
@@ -33,6 +33,10 @@ ol {
 h1, h2, h3, h4, h5, h6, h7 {
   font-weight: bold;
   padding: .5em 0;
+}
+
+h3, h4, h5, h6, h7 {
+  text-decoration: underline;
 }
 
 h1 {
@@ -74,6 +78,10 @@ main {
   margin: 0 auto;
 }
 
+p {
+  margin: .5em 0;
+}
+
 a:link, a:visited {
   color: var(--highlight-color);
 }
@@ -82,10 +90,30 @@ a:hover {
   text-decoration: none;
 }
 
-
 a:link:has(h1), a:visited:has(h1) {
   text-decoration: none;
 }
+
+aside {
+  margin: 1em auto;
+  padding: .5em;
+  background-color: var(--inset-background-color);
+  border: 1px solid var(--border-color);
+  float: left;
+}
+
+dl {
+  line-height: 1.3em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 2em;
+}
+
 main {
   padding: 1em;
 }

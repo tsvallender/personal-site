@@ -4,6 +4,9 @@ en:
       microposts: μposts
       empty: You have no μposts yet.
       new: New μpost
+      intro_html: >
+        <p>This is a log of learning and collected notes and thoughts along the way. It’s public,
+        but that doesn’t mean it’s likely to be interesting to many people.</p>
     new:
       create: Create μpost
     edit:
