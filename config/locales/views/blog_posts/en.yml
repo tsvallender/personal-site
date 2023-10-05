@@ -12,3 +12,8 @@ en:
       confirm: Are you sure you want to delete this blog post?
     form:
       title: Title
+    show:
+      discuss_post_html: >
+        <aside><p>To discuss this or any of my other posts, why not reach out by
+        <a href="mailto:t+blog@tsvallender.co.uk">email</a> or on
+        <a href="https://ruby.social/@tsvallender">Mastodon</a>?</p></aside>
