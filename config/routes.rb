@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   delete "log_out", to: "sessions#destroy_session"
   get "confirm_email", to: "email_confirmations#confirm"
 
-  resources :microposts, only: [:index, :new, :create, :show]
+  resources :microposts
 end

@@ -2,7 +2,7 @@
 
 class MicropostsController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
-  before_action :set_micropost, only: [:show]
+  before_action :set_micropost, only: [:show, :edit, :update, :destroy]
 
   def index
     @microposts = Micropost.all.order(created_at: :desc)
@@ -23,6 +23,24 @@ class MicropostsController < ApplicationController
   end
 
   def show; end
+
+  def edit; end
+
+  def update
+    if @micropost.update(micropost_params)
+      redirect_to @micropost, notice: t(".updated")
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    if @micropost.destroy
+      redirect_to microposts_path, notice: t(".deleted")
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
 
   private
 

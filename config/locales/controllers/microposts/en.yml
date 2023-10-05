@@ -1,3 +1,5 @@
 en:
   microposts:
     created: Successfully created μpost
+    updated: Successfully updated μpost
+    deleted: Successfully deleted μpost
