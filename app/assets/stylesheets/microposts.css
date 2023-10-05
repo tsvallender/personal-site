@@ -24,7 +24,6 @@ form#micropost_form {
 }
 
 .micropost {
-  max-width: 55em;
   margin: 1em auto;
   padding: .5em;
   background-color: var(--inset-background-color);
