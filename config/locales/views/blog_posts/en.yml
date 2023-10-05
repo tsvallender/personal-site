@@ -1,0 +1,14 @@
+en:
+  blog_posts:
+    index:
+      blog_posts: blog posts
+      empty: You have no blog posts yet.
+      new: New blog post
+    new:
+      create: Create blog post
+    edit:
+      edit: Edit blog post
+      delete: Delete blog post
+      confirm: Are you sure you want to delete this blog post?
+    form:
+      title: Title

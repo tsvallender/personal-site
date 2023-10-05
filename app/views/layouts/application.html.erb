@@ -18,6 +18,7 @@
       <nav>
         <ul>
           <li><%= link_to t(".home"), root_path %></li>
+          <li><%= link_to t(".blog_posts"), blog_posts_path %></li>
           <li><%= link_to t(".microposts"), microposts_path %></li>
           <% if logged_in? %>
             <li><%= link_to t(".profile"), user_path(current_user) %></li>

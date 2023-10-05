@@ -1,0 +1,10 @@
+<% @title = t(".edit") %>
+
+<%= render partial: "form",
+           locals: {
+             user: @user,
+             button_text: t(".edit"),
+             title: t(".edit"),
+           } %>
+
+<%= link_to t(".delete"), @blog_post, data: { turbo_method: :delete, turbo_confirm: t(".confirm") } %>
