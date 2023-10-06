@@ -26,6 +26,12 @@
     '';
   };
 
+  scripts = {
+    prodshell.exec = ''
+      kamal app exec -i --reuse bash
+    '';
+  };
+
   services.mailhog = {
     enable = true;
   };
