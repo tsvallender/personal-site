@@ -9,6 +9,7 @@ class BlogPost < ApplicationRecord
             :published,
             :slug,
             :content,
+            :summary,
             presence: true
 
   validates :slug, uniqueness: true

@@ -3,9 +3,11 @@ published:
   user: trevor
   published: true
   slug: published
+  summary: Published!
 
 draft:
   title: A draft post
   user: trevor
   published: false
   slug: draft
+  summary: Draft!

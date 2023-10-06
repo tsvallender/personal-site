@@ -52,6 +52,7 @@ class BlogPostsController < ApplicationController
     params.require(:blog_post).permit(
       :title,
       :content,
+      :summary,
       :published,
       :slug,
     )

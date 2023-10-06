@@ -32,4 +32,9 @@ class BlogPostTest < ActiveSupport::TestCase
     @post.content = nil
     assert_not @post.valid?
   end
+
+  test "must have summary" do
+    @post.summary = nil
+    assert_not @post.valid?
+  end
 end

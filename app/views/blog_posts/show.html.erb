@@ -1,3 +1,10 @@
-<%= render @blog_post %>
+<div id="@blog_post_<%= @blog_post.id %>" class="blog_post">
+  <h2><%= @blog_post.title %></h2>
+  <p><%= @blog_post.content %></p>
+  <div class="created_at">
+    <%= link_to "Edit", edit_blog_post_path(@blog_post) if @blog_post.user == current_user %>
+    <%= link_to @blog_post.created_at.strftime("%Y-%m-%d %H:%M"), @blog_post %>
+  </div>
+</div>
 
 <%= t(".discuss_post_html") %>
