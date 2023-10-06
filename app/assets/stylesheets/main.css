@@ -94,11 +94,14 @@ a:link:has(h1), a:visited:has(h1) {
   text-decoration: none;
 }
 
-aside {
+section.content, aside {
   margin: 1em auto;
   padding: .5em;
   background-color: var(--inset-background-color);
   border: 1px solid var(--border-color);
+}
+
+aside {
   float: left;
 }
 
