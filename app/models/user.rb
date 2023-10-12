@@ -5,6 +5,7 @@ require "securerandom"
 class User < ApplicationRecord
   has_secure_password
   has_many :microposts
+  has_many :blog_posts
 
   validates :username,
             :first_name,

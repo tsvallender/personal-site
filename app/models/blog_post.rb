@@ -6,13 +6,17 @@ class BlogPost < ApplicationRecord
 
   validates :title,
             :user,
-            :published,
             :slug,
             :content,
             :summary,
             presence: true
 
+  validates :published, inclusion: { in: [true, false] }
+
   validates :slug, uniqueness: true
+
+  scope :published, -> { where(published: true) }
+  scope :draft, -> { where(published: false) }
 
   def to_param
     slug

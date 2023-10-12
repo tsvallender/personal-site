@@ -4,4 +4,7 @@
 
 <% if @user == current_user %>
   <%= link_to t(".edit_user_details"), edit_user_path(@user) %>
+
+  <h2>Draft blog posts</h2>
+  <%= render @user.blog_posts.draft %>
 <% end %>

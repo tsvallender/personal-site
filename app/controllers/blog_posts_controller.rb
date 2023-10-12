@@ -5,7 +5,7 @@ class BlogPostsController < ApplicationController
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blog_posts = BlogPost.all.order(created_at: :desc)
+    @blog_posts = BlogPost.published.order(created_at: :desc)
   end
 
   def new
@@ -15,6 +15,7 @@ class BlogPostsController < ApplicationController
   def create
     @blog_post = BlogPost.new(blog_post_params)
     @blog_post.user = helpers.current_user
+
     if @blog_post.save
       redirect_to @blog_post, notice: t(".created")
     else
