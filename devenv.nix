@@ -13,6 +13,7 @@
     git
     pspg
     openssl
+    libyaml
   ];
 
   languages.ruby.enable = true;
