@@ -5,7 +5,9 @@ class BlogPostsController < ApplicationController
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blog_posts = BlogPost.published.order(created_at: :desc)
+    @blog_posts = BlogPost.published
+                          .order(created_at: :desc)
+                          .page(params[:page])
   end
 
   def new

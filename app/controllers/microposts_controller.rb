@@ -5,7 +5,9 @@ class MicropostsController < ApplicationController
   before_action :set_micropost, only: [:show, :edit, :update, :destroy]
 
   def index
-    @microposts = Micropost.all.order(created_at: :desc)
+    @microposts = Micropost.all
+                           .order(created_at: :desc)
+                           .page(params[:page])
   end
 
   def new

@@ -18,6 +18,8 @@ class BlogPost < ApplicationRecord
   scope :published, -> { where(published: true) }
   scope :draft, -> { where(published: false) }
 
+  paginates_per 15
+
   def to_param
     slug
   end
