@@ -14,4 +14,10 @@ module ApplicationHelper
       render "shared/flash"
     end
   end
+
+  def updated_at(object)
+    return "" if object.created_at == object.updated_at
+
+    object.updated_at.strftime("%Y-%m-%d %H:%M")
+  end
 end
