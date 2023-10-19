@@ -17,6 +17,7 @@ class MicropostsController < ApplicationController
   def create
     micropost = Micropost.new(micropost_params)
     micropost.user = helpers.current_user
+    micropost.add_tags(params[:tags])
     if micropost.save
       redirect_to micropost, notice: t(".created")
     else
@@ -45,6 +46,10 @@ class MicropostsController < ApplicationController
   end
 
   private
+
+  def parse_tags(tags)
+    tags.split
+  end
 
   def micropost_params
     params.require(:micropost).permit(

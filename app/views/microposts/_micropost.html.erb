@@ -1,5 +1,13 @@
 <div class="micropost">
   <%= micropost.content %>
+  <% unless micropost.tags.empty? %>
+    <h5>Tags:</h5>
+    <ul id="micropost-<%= micropost.id %>-tags" class="micropost-tags">
+      <% micropost.tags.each do |tag| %>
+        <li><%= tag.name %></li>
+      <% end %>
+    </ul>
+  <% end %>
   <div class="created_at">
     <%= link_to "Edit", edit_micropost_path(micropost) if micropost.user == current_user %>
     <%= link_to micropost.created_at.strftime("%Y-%m-%d %H:%M"), micropost %>
