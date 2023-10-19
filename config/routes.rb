@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   resources :blog_posts
   resources :microposts
+  resources :tags, only: [:index, :show]
 end

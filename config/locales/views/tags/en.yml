@@ -1,0 +1,6 @@
+en:
+  tags:
+    index:
+      tags: Tags
+      empty: You don’t have any tags yet
+
