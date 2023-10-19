@@ -15,6 +15,7 @@ gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false
 
 gem "kaminari" # Pagination
+gem "solid_cache"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
