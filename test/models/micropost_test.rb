@@ -17,4 +17,11 @@ class MicropostTest < ActiveSupport::TestCase
     @micropost.content = nil
     assert_not @micropost.valid?
   end
+
+  test "can add tags" do
+    assert_empty @micropost.tags
+    assert_difference "@micropost.tags.count", +3 do
+      @micropost.add_tags("foo", "bar", "baz")
+    end
+  end
 end
