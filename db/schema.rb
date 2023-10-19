@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_19_164620) do
+ActiveRecord::Schema[7.1].define(version: 2023_10_19_172703) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -68,6 +68,13 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_19_164620) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_microposts_on_user_id"
+  end
+
+  create_table "microposts_tags", id: false, force: :cascade do |t|
+    t.bigint "tag_id", null: false
+    t.bigint "micropost_id", null: false
+    t.index ["micropost_id", "tag_id"], name: "index_microposts_tags_on_micropost_id_and_tag_id"
+    t.index ["tag_id", "micropost_id"], name: "index_microposts_tags_on_tag_id_and_micropost_id"
   end
 
   create_table "tags", force: :cascade do |t|
