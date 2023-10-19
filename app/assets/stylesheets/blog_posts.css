@@ -38,3 +38,7 @@ form#blog_post_form {
     font-size: .8em;
   }
 }
+
+ul#blog_posts {
+  list-style-type: none;
+}
