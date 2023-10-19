@@ -17,7 +17,7 @@ class MicropostsController < ApplicationController
   def create
     micropost = Micropost.new(micropost_params)
     micropost.user = helpers.current_user
-    micropost.add_tags(params[:tags])
+    micropost.set_tags(params[:tags]) if params[:tags]
     if micropost.save
       redirect_to micropost, notice: t(".created")
     else
@@ -30,6 +30,7 @@ class MicropostsController < ApplicationController
   def edit; end
 
   def update
+    @micropost.set_tags(params[:tags]) if params[:tags]
     if @micropost.update(micropost_params)
       redirect_to @micropost, notice: t(".updated")
     else

@@ -3,7 +3,7 @@
 
   <%= f.rich_text_area :content %>
 
-  <%= text_field_tag :tags %>
+  <%= text_field_tag :tags, tag_string(@micropost) %>
 
   <%= f.submit button_text %>
 <% end %>

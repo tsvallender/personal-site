@@ -21,7 +21,17 @@ class MicropostTest < ActiveSupport::TestCase
   test "can add tags" do
     assert_empty @micropost.tags
     assert_difference "@micropost.tags.count", +3 do
-      @micropost.add_tags("foo", "bar", "baz")
+      @micropost.set_tags("foo", "bar", "baz")
+    end
+  end
+
+  test "duplicate tags are not added" do
+    assert_empty @micropost.tags
+    assert_difference "@micropost.tags.count", +3 do
+      @micropost.set_tags("foo", "bar", "baz")
+    end
+    assert_no_difference "@micropost.tags.count" do
+      @micropost.set_tags("bar", "baz")
     end
   end
 end
