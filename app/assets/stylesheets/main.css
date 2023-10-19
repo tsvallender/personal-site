@@ -1,11 +1,11 @@
 :root {
-  --border-color: gray;
-  --highlight-color: #D36200;
-  --background-color: #CCC;
-  --dark-background-color: #333;
-  --inset-background-color: #FFFFFF;
-  --alert-border-color: #800000;
-  --form-error-color: #FF0000;
+  --border-color: #282828;
+  --highlight-color: #d65d0e;
+  --background-color: #928374;
+  --dark-background-color: #1d2021;
+  --inset-background-color: #fbf1c7;
+  --alert-border-color: #98971a;
+  --form-error-color: #cc241d;
 }
 
 * {
