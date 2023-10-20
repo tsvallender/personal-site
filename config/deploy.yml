@@ -52,7 +52,3 @@ builder:
   remote:
     arch: arm64
     host: ssh://kamal@tsvallender.co.uk
-
-healthcheck:
-  path: /sessions/new
-  port: 3000
