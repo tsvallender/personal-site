@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_29_114804) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_29_121659) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -91,6 +91,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_29_114804) do
     t.float "amount", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "diary_entry_id", null: false
+    t.index ["diary_entry_id"], name: "index_exercises_on_diary_entry_id"
     t.index ["exercise_type_id"], name: "index_exercises_on_exercise_type_id"
   end
 
@@ -144,6 +146,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_29_114804) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "blog_posts", "users"
   add_foreign_key "diary_entries", "users"
+  add_foreign_key "exercises", "diary_entries"
   add_foreign_key "exercises", "exercise_types"
   add_foreign_key "microposts", "users"
 end

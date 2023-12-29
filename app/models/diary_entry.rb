@@ -1,5 +1,6 @@
 class DiaryEntry < ApplicationRecord
   belongs_to :user
+  has_many :exercises
 
   validates :date,
             :pain_level,
