@@ -21,6 +21,7 @@
           <li><%= link_to t(".blog_posts"), blog_posts_path %></li>
           <li><%= link_to t(".microposts"), microposts_path %></li>
           <% if logged_in? %>
+            <li><%= link_to t(".diary_entries"), diary_entries_path %></li>
             <li><%= link_to t(".profile"), user_path(current_user) %></li>
             <li><%= link_to t(".log_out"), log_out_path, data: { turbo_method: :delete } %></li>
           <% end %>

@@ -1,0 +1,4 @@
+<%= @diary_entry.notes %>
+<h2><%= link_to @diary_entry.date, @diary_entry %></h2>
+<%= render partial: "levels", locals: { diary_entry: @diary_entry } %>
+<%= link_to t(".edit"), edit_diary_entry_path(@diary_entry) %>

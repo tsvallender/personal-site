@@ -1,0 +1,25 @@
+en:
+  diary_entries:
+    index:
+      diary_entries: Diary Entries
+      empty: You have no diary entries yet.
+      new: New diary entry
+    new:
+      create: Create diary entry
+    edit:
+      edit: Edit diary entry
+      delete: Delete diary entry
+      confirm: Are you sure you want to delete this diary entry?
+    create:
+      created: Diary entry created
+    show:
+      edit: Edit
+    update:
+      updated: Diary entry updated
+    levels:
+      pain_level: Pain
+      energy_level: Energy
+      mental_alertness_level: Mental Alertness
+      work_stress_level: Work Stress
+      life_stress_level: Life Stress
+      sleep_quality_level: Sleep Quality

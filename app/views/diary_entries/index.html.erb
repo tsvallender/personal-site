@@ -1,0 +1,13 @@
+<h2><%= t(".diary_entries") %></h2>
+<%= link_to t(".new"), new_diary_entry_path %>
+
+<% if @diary_entries.empty? %>
+  <p><%= t(".empty") %></p>
+<% else %>
+  <ul id="diary_entries">
+    <% @diary_entries.each do |diary_entry| %>
+      <li><%= render diary_entry %></li>
+    <% end %>
+  </ul>
+  <%= paginate @diary_entries %>
+<% end %>

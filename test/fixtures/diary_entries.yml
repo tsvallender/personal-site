@@ -1,21 +1,21 @@
 one:
-  user: tsvallender
+  user: trevor
   date: 2023-12-29
   notes: Oh, what a day
-  exercise: one
   pain_level: 10
   energy_level: 10
   mental_alertness_level: 10
   work_stress_level: 10
   life_stress_level: 10
+  sleep_quality_level: 10
 
 two:
-  user: tsvallender
+  user: trevor
   date: 2023-12-28
   notes: Wow
-  exercise: two
   pain_level: 1
   energy_level: 1
   mental_alertness_level: 1
   work_stress_level: 1
   life_stress_level: 1
+  sleep_quality_level: 10

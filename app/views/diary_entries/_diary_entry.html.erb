@@ -1,0 +1,4 @@
+<div id="diary_entry_<%= diary_entry.id %>" class="diary_entry">
+  <h2><%= link_to diary_entry.date, diary_entry %></h2>
+  <%= render partial: "levels", locals: { diary_entry: diary_entry } %>
+</div>

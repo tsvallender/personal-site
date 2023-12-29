@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :blog_posts
   resources :microposts
   resources :tags, only: [:index, :show]
+  resources :diary_entries, except: [:destroy]
 
   get "up" => "rails/health#show", as: :rails_health_check
 end

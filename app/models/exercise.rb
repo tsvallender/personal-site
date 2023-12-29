@@ -1,4 +1,4 @@
 class Exercise < ApplicationRecord
-  belongs_to :type
+  belongs_to :exercise_type
   belongs_to :diary_entry
 end

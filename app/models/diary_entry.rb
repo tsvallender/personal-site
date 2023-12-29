@@ -8,5 +8,6 @@ class DiaryEntry < ApplicationRecord
             :mental_alertness_level,
             :work_stress_level,
             :life_stress_level,
+            :sleep_quality_level,
             presence: true
 end
