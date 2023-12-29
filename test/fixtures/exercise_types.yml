@@ -1,0 +1,7 @@
+running:
+  name: Running
+  unit: km
+
+cycling:
+  name: Running
+  unit: km
