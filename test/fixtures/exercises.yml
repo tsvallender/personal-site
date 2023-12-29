@@ -1,11 +1,11 @@
 one:
   exercise_type: running
-  at: 2023-12-29 11:41:45
+  occurred_at: 2023-12-29 11:41:45
   amount: 5
   diary_entry: one
 
 two:
   exercise_type: cycling
-  at: 2023-12-29 11:41:45
+  occurred_at: 2023-12-29 11:41:45
   amount: 10.5
   diary_entry: two
