@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_29_121659) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_29_143648) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -94,12 +94,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_29_121659) do
     t.bigint "diary_entry_id", null: false
     t.index ["diary_entry_id"], name: "index_exercises_on_diary_entry_id"
     t.index ["exercise_type_id"], name: "index_exercises_on_exercise_type_id"
-  end
-
-  create_table "foods", force: :cascade do |t|
-    t.text "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "microposts", force: :cascade do |t|
