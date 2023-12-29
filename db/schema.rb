@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_29_114145) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_29_114804) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,6 +61,21 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_29_114145) do
     t.datetime "updated_at", null: false
     t.string "summary", null: false
     t.index ["user_id"], name: "index_blog_posts_on_user_id"
+  end
+
+  create_table "diary_entries", force: :cascade do |t|
+    t.text "notes", default: "", null: false
+    t.date "date", null: false
+    t.bigint "user_id", null: false
+    t.integer "pain_level", null: false
+    t.integer "energy_level", null: false
+    t.integer "mental_alertness_level", null: false
+    t.integer "work_stress_level", null: false
+    t.integer "life_stress_level", null: false
+    t.integer "sleep_quality_level", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_diary_entries_on_user_id"
   end
 
   create_table "exercise_types", force: :cascade do |t|
@@ -128,6 +143,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_29_114145) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "blog_posts", "users"
+  add_foreign_key "diary_entries", "users"
   add_foreign_key "exercises", "exercise_types"
   add_foreign_key "microposts", "users"
 end
