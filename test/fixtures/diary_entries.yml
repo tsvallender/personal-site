@@ -8,6 +8,7 @@ one:
   work_stress_level: 10
   life_stress_level: 10
   sleep_quality_level: 10
+  weight: 86
 
 two:
   user: trevor
@@ -19,3 +20,4 @@ two:
   work_stress_level: 1
   life_stress_level: 1
   sleep_quality_level: 10
+  weight: 89

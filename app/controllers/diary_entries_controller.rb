@@ -1,5 +1,5 @@
 class DiaryEntriesController < ApplicationController
-  before_action :set_diary_entry, only: [:show, :edit, :update, :destroy]
+  before_action :set_diary_entry, only: [:show, :edit, :update]
 
   def index
     @diary_entries = DiaryEntry.all
@@ -50,6 +50,7 @@ class DiaryEntriesController < ApplicationController
       :work_stress_level,
       :life_stress_level,
       :sleep_quality_level,
+      :weight,
     )
   end
 end
