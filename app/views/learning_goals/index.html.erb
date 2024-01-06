@@ -1,0 +1,14 @@
+<h2><%= t(".learning_goals") %></h2>
+
+<%= link_to t(".new"), new_learning_goal_path if logged_in? %>
+
+<% if @learning_goals.empty? %>
+  <p><%= t(".empty") %></p>
+<% else %>
+  <ul id="learning_goals">
+    <% @learning_goals.each do |learning_goal| %>
+      <li><%= link_to learning_goal.title, learning_goal %></li>
+    <% end %>
+  </ul>
+  <%= paginate @learning_goals %>
+<% end %>

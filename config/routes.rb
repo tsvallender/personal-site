@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "confirm_email", to: "email_confirmations#confirm"
 
   resources :blog_posts
+  resources :learning_goals
   resources :microposts
   resources :tags, only: [:index, :show]
   resources :diary_entries, except: [:destroy]

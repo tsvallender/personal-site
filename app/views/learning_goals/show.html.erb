@@ -1,0 +1,11 @@
+<div id="learning_goal_<%= @learning_goal.id %>" class="learning_goal">
+  <h2><%= @learning_goal.title %></h2>
+  <p><%= @learning_goal.starts_on %>-<%= @learning_goal.ends_on %></p>
+  <h3><%= t(".description") %></h3>
+  <p><%= @learning_goal.description %></p>
+  <% if @learning_goal.completed? %>
+    <h3><%= t(".retrospective") %></h3>
+    <p><%= @learning_goal.retrospective %></p>
+  <% end %>
+  <%= link_to t(".edit"), edit_learning_goal_path(@learning_goal) if @learning_goal.user == current_user %>
+</div>

@@ -1,0 +1,20 @@
+en:
+  learning_goals:
+    index:
+      learning_goals: Learning Goals
+      empty: You have no learning goals yet.
+      new: New learning goal
+    new:
+      create: Create learning goal
+    edit:
+      edit: Edit learning goal
+      delete: Delete learning goal
+      confirm: Are you sure you want to delete this learning goal?
+    form:
+      title: Title
+    show:
+      completed: Learning goal is complete
+      not_completed: Learning goal is incomplete
+      edit: Edit
+      description: Description
+      retrospective: Retrospective
