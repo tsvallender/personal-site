@@ -16,6 +16,9 @@
   <%= f.label :completed %>
   <%= f.check_box :completed %>
 
+  <%= f.label :microposts_tag %>
+  <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name %>
+
   <%= f.submit button_text %>
 <% end %>
 

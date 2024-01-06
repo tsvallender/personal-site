@@ -56,6 +56,7 @@ class LearningGoalsController < ApplicationController
       :retrospective,
       :completed,
       :user,
+      tag_ids: [],
     )
   end
 
