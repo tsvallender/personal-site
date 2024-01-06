@@ -10,3 +10,7 @@ draft_blog_post:
   record: draft (BlogPost)
   name: content
   body: <p>Just some text</p>
+learning_goal_one:
+  record: linux (LearningGoal)
+  name: content
+  body: <p>Learning about Linux</p>
