@@ -18,3 +18,5 @@ en:
       edit: Edit
       description: Description
       retrospective: Retrospective
+      tags: Tags
+      related_microposts: Related μposts
