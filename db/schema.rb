@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_06_103226) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_07_131738) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -140,6 +140,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_06_103226) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "todos", force: :cascade do |t|
+    t.bigint "learning_goal_id", null: false
+    t.boolean "done", default: false, null: false
+    t.string "title", default: "", null: false
+    t.date "due"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["learning_goal_id"], name: "index_todos_on_learning_goal_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "password_digest", null: false
@@ -161,4 +171,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_06_103226) do
   add_foreign_key "exercises", "exercise_types"
   add_foreign_key "learning_goals", "users"
   add_foreign_key "microposts", "users"
+  add_foreign_key "todos", "learning_goals"
 end

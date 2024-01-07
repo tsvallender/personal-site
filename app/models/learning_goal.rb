@@ -3,6 +3,7 @@ class LearningGoal < ApplicationRecord
 
   has_rich_text :description
   has_rich_text :retrospective
+  validates :completed, inclusion: { in: [true, false] }
 
   validates :title, presence: true
 
