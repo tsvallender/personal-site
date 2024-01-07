@@ -1,0 +1,18 @@
+<%= form_with model: @todo, id: "todo_form" do |f| %>
+  <h2><%= title %></h2>
+
+  <%= f.text_field :title, placeholder: t(".title") %>
+
+  <%= f.label :learning_goal %>
+  <%= f.collection_select :learning_goal_id, LearningGoal.all, :id, :title %>
+
+  <%= f.rich_text_area :description %>
+
+  <%= f.label :due %>
+  <%= f.date_field :due %>
+
+  <%= f.label :done %>
+  <%= f.check_box :done %>
+
+  <%= f.submit button_text %>
+<% end %>

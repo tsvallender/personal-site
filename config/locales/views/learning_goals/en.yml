@@ -4,6 +4,7 @@ en:
       learning_goals: Learning Goals
       empty: You have no learning goals yet.
       new: New learning goal
+      new_todo: New todo
     new:
       create: Create learning goal
     edit:
@@ -19,4 +20,5 @@ en:
       description: Description
       retrospective: Retrospective
       tags: Tags
+      todos: Todos
       related_microposts: Related μposts

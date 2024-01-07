@@ -1,0 +1,10 @@
+<input type="checkbox" class="todo" disabled
+       <% if todo.done? %>
+         checked
+       <% end %>>
+<%= todo.title %>
+<%= todo.description %>
+<% if todo.user == current_user %>
+  <%= link_to t(".edit"), edit_todo_path(todo) %>
+  <%= link_to t(".delete"), todo, data: { turbo_method: :delete, turbo_confirm: t(".confirm") } %>
+<% end %>

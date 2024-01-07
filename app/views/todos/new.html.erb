@@ -1,0 +1,8 @@
+<% @title = t(".create") %>
+
+<%= render partial: "form",
+  locals: {
+    user: @user,
+    button_text: t(".create"),
+    title: t(".create"),
+  } %>

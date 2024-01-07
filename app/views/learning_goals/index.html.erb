@@ -1,6 +1,7 @@
 <h2><%= t(".learning_goals") %></h2>
 
 <%= link_to t(".new"), new_learning_goal_path if logged_in? %>
+<%= link_to t(".new_todo"), new_todo_path if logged_in? %>
 
 <% if @learning_goals.empty? %>
   <p><%= t(".empty") %></p>

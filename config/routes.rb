@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :learning_goals
   resources :microposts
   resources :tags, only: [:index, :show]
+  resources :todos, only: [:new, :create, :edit, :update, :destroy]
   resources :diary_entries, except: [:destroy]
 
   get "up" => "rails/health#show", as: :rails_health_check

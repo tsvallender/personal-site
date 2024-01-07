@@ -1,0 +1,5 @@
+en:
+  todos:
+    created: Successfully created todo
+    updated: Successfully updated todo
+    deleted: Successfully deleted todo

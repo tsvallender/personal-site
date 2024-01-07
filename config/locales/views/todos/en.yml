@@ -1,0 +1,14 @@
+en:
+  todos:
+    new:
+      create: Create todo
+    edit:
+      edit: Edit todo
+      delete: Delete todo
+      confirm: Are you sure you want to delete this todo?
+    form:
+      title: Title
+    todo:
+      edit: Edit todo
+      delete: Delete todo
+      confirm: Are you sure you want to delete this todo?
