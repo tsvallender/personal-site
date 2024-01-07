@@ -4,11 +4,7 @@ class LearningGoalsController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
   before_action :set_learning_goal, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @learning_goals = LearningGoal.all
-                                  .order(created_at: :desc)
-                                  .page(params[:page])
-  end
+  def index ; end
 
   def new
     @learning_goal = LearningGoal.new

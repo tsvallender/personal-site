@@ -7,8 +7,11 @@ class LearningGoal < ApplicationRecord
   has_rich_text :description
   has_rich_text :retrospective
   validates :completed, inclusion: { in: [true, false] }
-
   validates :title, presence: true
+
+  scope :current, -> { where(starts_on: ..Date.today, ends_on: Date.today..) }
+  scope :past, -> { where(ends_on: ..Date.today) }
+  scope :future, -> { where(starts_on: Date.today..) }
 
   def microposts
     microposts = Micropost.none

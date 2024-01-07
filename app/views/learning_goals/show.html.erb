@@ -10,14 +10,14 @@
   <% end %>
 
   <h3><%= t(".todos") %></h3>
-  <ul>
+  <ul class="todos">
     <% @learning_goal.todos.each do |todo| %>
       <li><%= render todo %></li>
     <% end %>
   </ul>
 
   <h3><%= t(".tags") %></h3>
-  <ul>
+  <ul class="tags">
     <% @learning_goal.tags.each do |tag| %>
       <li><%= link_to tag.name, tag %></li>
     <% end %>

@@ -13,3 +13,14 @@
 ul#learning_goals {
   list-style-type: none;
 }
+
+ul.todos {
+  list-style-type: none;
+}
+
+ul.tags {
+  list-style-type: none;
+  > li {
+    display: inline;
+  }
+}

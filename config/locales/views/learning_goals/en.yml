@@ -2,9 +2,14 @@ en:
   learning_goals:
     index:
       learning_goals: Learning Goals
-      empty: You have no learning goals yet.
       new: New learning goal
       new_todo: New todo
+      current: Current
+      future: Future
+      past: Past
+      no_current_goals: You have no current goals
+      no_future_goals: You have no future goals
+      no_past_goals: You have no past goals
     new:
       create: Create learning goal
     edit:

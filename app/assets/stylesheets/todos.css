@@ -1,0 +1,44 @@
+form#blog_post_form, form#learning_goal_form, form#todo_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 55em;
+
+  > h2 {
+    width: 100%;
+  }
+
+  > trix-toolbar {
+    max-width: 95%;
+  }
+
+  > trix-editor {
+    width: 95%;
+    > ul {
+      list-style-type: disc;
+    }
+  }
+
+  input[type=text] {
+    width: 95%;
+  }
+
+  > input[type=submit] {
+    width: 95%;
+  }
+}
+
+.blog_post {
+  margin: 1em auto;
+  padding: .5em;
+  background-color: var(--inset-background-color);
+  border: 1px solid var(--border-color);
+
+  > .created_at {
+    text-align: right;
+    font-size: .8em;
+  }
+}
+
+ul#blog_posts {
+  list-style-type: none;
+}

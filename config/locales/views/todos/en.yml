@@ -9,6 +9,6 @@ en:
     form:
       title: Title
     todo:
-      edit: Edit todo
-      delete: Delete todo
+      edit: Edit
+      delete: Delete
       confirm: Are you sure you want to delete this todo?

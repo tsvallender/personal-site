@@ -3,13 +3,23 @@
 <%= link_to t(".new"), new_learning_goal_path if logged_in? %>
 <%= link_to t(".new_todo"), new_todo_path if logged_in? %>
 
-<% if @learning_goals.empty? %>
-  <p><%= t(".empty") %></p>
+<h3><%= t(".current") %></h3>
+<% if LearningGoal.current.any? %>
+  <%= render LearningGoal.current %>
 <% else %>
-  <ul id="learning_goals">
-    <% @learning_goals.each do |learning_goal| %>
-      <li><%= link_to learning_goal.title, learning_goal %></li>
-    <% end %>
-  </ul>
-  <%= paginate @learning_goals %>
+  <p><%= t(".no_current_goals") %></p>
+<% end %>
+
+<h3><%= t(".future") %></h3>
+<% if LearningGoal.future.any? %>
+  <%= render LearningGoal.future %>
+<% else %>
+  <p><%= t(".no_future_goals") %></p>
+<% end %>
+
+<h3><%= t(".past") %></h3>
+<% if LearningGoal.past.any? %>
+  <%= render LearningGoal.past %>
+<% else %>
+  <p><%= t(".no_past_goals") %></p>
 <% end %>
