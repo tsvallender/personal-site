@@ -13,6 +13,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false
+gem "flaggle_rock", git: "https://git.tsvallender.co.uk/tsv/flaggle_rock"
 
 gem "kaminari" # Pagination
 gem "solid_cache"
