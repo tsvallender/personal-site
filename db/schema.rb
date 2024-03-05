@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_26_101316) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_05_160037) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -105,17 +105,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_26_101316) do
     t.index ["name"], name: "index_feature_flags_on_name", unique: true
   end
 
-  create_table "learning_goals", force: :cascade do |t|
-    t.string "title", null: false
-    t.date "starts_on"
-    t.date "ends_on"
-    t.boolean "completed", default: false, null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_learning_goals_on_user_id"
-  end
-
   create_table "learning_goals_tags", id: false, force: :cascade do |t|
     t.bigint "learning_goal_id", null: false
     t.bigint "tag_id", null: false
@@ -148,16 +137,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_26_101316) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "todos", force: :cascade do |t|
-    t.bigint "learning_goal_id", null: false
-    t.boolean "done", default: false, null: false
-    t.string "title", default: "", null: false
-    t.date "due"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["learning_goal_id"], name: "index_todos_on_learning_goal_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "password_digest", null: false
@@ -177,7 +156,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_26_101316) do
   add_foreign_key "diary_entries", "users"
   add_foreign_key "exercises", "diary_entries"
   add_foreign_key "exercises", "exercise_types"
-  add_foreign_key "learning_goals", "users"
   add_foreign_key "microposts", "users"
-  add_foreign_key "todos", "learning_goals"
 end
