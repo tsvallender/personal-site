@@ -12,9 +12,6 @@
 
   <body>
     <header>
-      <%= link_to root_path do %>
-        <h1><%= t(".site_title") %></h1>
-      <% end %>
       <nav>
         <ul>
           <li><%= link_to t(".home"), root_path %></li>
@@ -27,6 +24,9 @@
           <% end %>
         </ul>
       </nav>
+      <%= link_to root_path do %>
+        <h1><%= t(".site_title") %></h1>
+      <% end %>
     </header>
     <main>
       <%= render "shared/flash" %>

@@ -31,7 +31,8 @@ form#blog_post_form {
   margin: 1em auto;
   padding: .5em;
   background-color: var(--inset-background-color);
-  border: 1px solid var(--border-color);
+  grid-column: 2;
+  grid-row: 1;
 
   > .created_at {
     text-align: right;

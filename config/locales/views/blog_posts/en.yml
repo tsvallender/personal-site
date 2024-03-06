@@ -1,7 +1,7 @@
 en:
   blog_posts:
     index:
-      blog_posts: blog posts
+      blog_posts: Blog posts
       empty: You have no blog posts yet.
       new: New blog post
     new:

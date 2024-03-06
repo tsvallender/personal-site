@@ -1,14 +1,16 @@
-<h2><%= t(".blog_posts") %></h2>
+<section class="content">
+  <h2><%= t(".blog_posts") %></h2>
 
-<%= link_to t(".new"), new_blog_post_path if logged_in? %>
+  <%= link_to t(".new"), new_blog_post_path if logged_in? %>
 
-<% if @blog_posts.empty? %>
-  <p><%= t(".empty") %></p>
-<% else %>
-  <ul id="blog_posts">
-    <% @blog_posts.each do |blog_post| %>
-      <li><%= render blog_post %></li>
-    <% end %>
-  </ul>
-  <%= paginate @blog_posts %>
-<% end %>
+  <% if @blog_posts.empty? %>
+    <p><%= t(".empty") %></p>
+  <% else %>
+    <ul id="blog_posts">
+      <% @blog_posts.each do |blog_post| %>
+        <li><%= render blog_post %></li>
+      <% end %>
+    </ul>
+    <%= paginate @blog_posts %>
+  <% end %>
+</section>

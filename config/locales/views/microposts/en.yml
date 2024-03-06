@@ -1,7 +1,7 @@
 en:
   microposts:
     index:
-      microposts: μposts
+      microposts: Microposts
       empty: You have no μposts yet.
       new: New μpost
       intro_html: >
