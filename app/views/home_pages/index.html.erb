@@ -1,23 +1,52 @@
 <section class="content">
   <h2>Hello.</h2>
 
-  <p>Welcome to my site! I’m a software engineer specialising in Ruby and Rails, with a love for *nix systems,
-  NixOS and free software in general. I’m also a maker and dad, and here is where my thoughts get dumped.</p>
+  <p>I’m a software engineer specialising in Ruby and Rails.</p>
 
-  <p>The code for my personal projects <%= link_to "can be found here", "https://git.tsvallender.co.uk/tsv" %></p>
+  <p>I’m passionate about <abbr title="Free and Open Source Software">FOSS</abbr> and building high quality
+  systems through modern software engineering techniques.</p>
+
+  <p>Check out some of the articles I’ve written on <%= link_to "my blog", blog_posts_path %>, or read
+  <%= link_to "the latest one", @latest_blog_post %>.</p>
+
+  <h3>Some of my personal projects:</h3>
+  <dl>
+    <dt><%= link_to "This site", "https://git.tsvallender.co.uk/tsv/Soc" %></dt>
+    <dd>The code for this very masterpiece.</dd>
+    <dt><%= link_to "Birthdaze", "https://git.tsvallender.co.uk/tsv/birthdaze" %></dt>
+    <dd>Generate an iCalendar feed of your contacts’ birthdays via a CardDAV server.</dd>
+    <dt><%= link_to "Redmine Jobs", "https://git.tsvallender.co.uk/tsv/Redmine-Jobs" %></dt>
+    <dd>A <%= link_to "Redmine", "https://redmine.org" %> plugin to make it simpler to manage client
+      jobs and their budgets.</dd>
+  </dl>
+
+  <p>My <%= link_to "dotfiles", "https://git.tsvallender.co.uk/tsv/dotfiles" %> are also available.</p>
 </section>
 
 <aside>
+<aside>
   <%= image_tag "avatar.png", alt: "T S Vallender", width: 200, height: 200, class: "avatar" %>
+</aside>
 
 <aside class="bordered-aside">
-  <h3>Find me:</h3>
   <dl>
-    <dt>Mastodon</dt>
+    <dt><i class="nf nf-linux-forgejo"></i> Code (Forgejo)</dt>
+    <dd><%= link_to "git.tsvallender.co.uk", "https://git.tsvallender.co.uk" %></dd>
+    <dt><i class="nf nf-md-github"></i> GitHub</dt>
+    <dd>
+      <%= link_to "github.com/tsvallender", "https://github.com/tsvallender" %>
+      <br>Note my own projects live on the Forgejo instance above.
+    </dd>
+    <dt><i class="nf nf-md-mastodon"></i> Mastodon</dt>
     <dd><%= link_to "@tsvallender@ruby.social", "https://ruby.social/@tsvallender" %></dd>
-    <dt>Pixelfed</dt>
+    <dt><i class="nf nf-fa-camera_retro"></i> Pixelfed</dt>
     <dd><%= link_to "@tsvallender@pixelfed.sdf.org", "https://pixelfed.sdf.org/tsvallender" %></dd>
-    <dt>Email</dt>
+    <dt><i class="nf nf-md-email"></i> Email</dt>
     <dd><%= mail_to "t@tsvallender.co.uk" %></dd>
+    <dt><i class="nf nf-md-chat"></i> Matrix</dt>
+    <dd><%= link_to "tsvallender:matrix.org", "https://matrix.to/#/@tsvallender:matrix.org" %></dd>
+    <dt><i class="nf nf-md-linkedin"></i> LinkedIn</dt>
+    <dd><%= link_to "linkedin.com/in/tsvallender", "https://www.linkedin.com/in/tsvallender/" %></dd>
   </dl>
+</aside>
 </aside>

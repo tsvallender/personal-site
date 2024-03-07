@@ -38,6 +38,10 @@ form#blog_post_form {
     text-align: right;
     font-size: .8em;
   }
+
+  h1 {
+    font-size: 2em;
+  }
 }
 
 ul#blog_posts {

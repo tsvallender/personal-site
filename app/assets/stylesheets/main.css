@@ -54,21 +54,24 @@ h3, h4, h5, h6, h7 {
   text-decoration: underline;
 }
 
-h1 {
-  background-color: var(--dark-background-color);
-  font-size: 5em;
-  text-align: center;
-  color: var(--highlight-color);
-  -webkit-text-stroke: 1px var(--background-color);
-  padding: .25em 0;
-}
-
 h2 {
   font-size: 2.5em;
 }
 
+h3 {
+  font-size: 1.5em;
+}
+
 header {
   display: contents;
+  h1 {
+    background-color: var(--dark-background-color);
+    font-size: 5em;
+    text-align: center;
+    color: var(--highlight-color);
+    -webkit-text-stroke: 1px var(--background-color);
+    padding: .25em 0;
+  }
 }
 
 nav {
@@ -102,7 +105,7 @@ nav {
 }
 
 p {
-  margin: .5em 0;
+  margin: 1em 0;
 }
 
 a:link, a:visited {
@@ -124,6 +127,11 @@ dl {
 
 dt {
   font-weight: bold;
+  padding: 1em 0 .5em 0;
+}
+
+aside dt {
+  font-size: 1.2em;
 }
 
 dd {
@@ -165,8 +173,6 @@ form {
   border: 1px solid var(--border-color);
   border-radius: .5em;
   font-size: 1.2em;
-  background-color: var(--inset-background-color);
-  box-shadow: .5em .5em 3em var(--dark-background-color);
 
   > label {
     grid-column: 1;

@@ -1,18 +1,20 @@
-<%= form_with model: @blog_post, id: "blog_post_form" do |f| %>
-  <h2><%= title %></h2>
+<section class="content">
+  <%= form_with model: @blog_post, id: "blog_post_form" do |f| %>
+    <h2><%= title %></h2>
 
-  <%= f.text_field :title, placeholder: t(".title") %>
+    <%= f.text_field :title, placeholder: t(".title") %>
 
-  <%= f.rich_text_area :content %>
+    <%= f.rich_text_area :content %>
 
-  <%= f.label :summary %>
-  <%= f.text_area :summary %>
+    <%= f.label :summary %>
+    <%= f.text_area :summary %>
 
-  <%= f.label :slug %>
-  <%= f.text_field :slug %>
+    <%= f.label :slug %>
+    <%= f.text_field :slug %>
 
-  <%= f.label :published %>
-  <%= f.check_box :published %>
+    <%= f.label :published %>
+    <%= f.check_box :published %>
 
-  <%= f.submit button_text %>
-<% end %>
+    <%= f.submit button_text %>
+  <% end %>
+</section>
