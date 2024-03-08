@@ -6,4 +6,6 @@ class HomePagesController < ApplicationController
   def index
     @latest_blog_post = BlogPost.published.order(created_at: :desc).first
   end
+
+  def uses ; end
 end

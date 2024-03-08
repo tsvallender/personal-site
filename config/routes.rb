@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   default_url_options :host => "tsvallender.co.uk"
 
   root "home_pages#index"
+  get "uses" => "home_pages#uses", as: :uses
+
   get "μposts", to: "microposts#index"
 
   # Users and sessions
