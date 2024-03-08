@@ -17,6 +17,9 @@ servers:
     options:
       network: kamal
 
+volumes:
+  - /srv/soc/storage:/rails/storage
+
 registry:
   username: tsvallender
   password:
