@@ -72,29 +72,30 @@ header {
     -webkit-text-stroke: 1px var(--background-color);
     padding: .25em 0;
   }
-}
 
-nav {
-  background-color: var(--dark-background-color);
-  padding: 1em;
-  font-family: "Rogue", sans-serif;
-  position: sticky;
-  top: 0;
-  > ul {
-    text-align: center;
-    animation-name: move-menu;
-    animation-duration: 3s;
-    animation-timeline: scroll(root block);
-    > li {
-      display: inline;
-      padding: 0 2em;
-      > a:link, > a:visited {
-        text-decoration: none;
-        font-size: 1.3em;
-        font-weight: bold;
-      }
-      > a:hover {
-        text-decoration: underline;
+  nav {
+    z-index: 999;
+    background-color: var(--dark-background-color);
+    padding: 1em;
+    font-family: "Rogue", sans-serif;
+    position: sticky;
+    top: 0;
+    > ul {
+      text-align: center;
+      animation-name: move-menu;
+      animation-duration: 3s;
+      animation-timeline: scroll(root block);
+      > li {
+        display: inline;
+        padding: 0 2em;
+        > a:link, > a:visited {
+          text-decoration: none;
+          font-size: 1.3em;
+          font-weight: bold;
+        }
+        > a:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
