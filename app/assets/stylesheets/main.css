@@ -244,3 +244,7 @@ div.alert {
   border-radius: .5em;
   margin: 1em 0;
 }
+
+.fullwidth {
+  width: 50%;
+}

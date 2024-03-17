@@ -1,29 +1,77 @@
 <section class="content">
   <h2>/uses</h2>
 
-  <p>This page is inspired by <%= link_to "/uses", "https://uses.tech" %>.</p>
+  <p>This page is inspired by <%= link_to "/uses", "https://uses.tech" %>. I won’t present every
+    boring detail of my setup, but anything I feel is interesting, unusual or I particularly love.</p>
   <p>For a more or less complete config, check out my <%= link_to "dotfiles", "https://git.tsvallender.co.uk/tsv/dotfiles" %>.</p>
 
   <hr>
 
   <h3>Hardware</h3>
 
-  <p>Incoming… about to build a new PC.</p>
+  <%= image_tag "office.jpeg", alt: "Photo of my office. A PC tower is on a desk next to a portrait monitor.", class: 'fullwidth' %>
+
+  <dl>
+    <dt>PC</dt>
+    <dd>I use a custom-built machine. Building it myself allowed me to maximise what I care about
+      (CPU, RAM, fast storage) while leaving out what I don’t (integrated graphics are good enough
+      for me). It’s cased inside the beautiful <%= link_to "Fractal North", "https://www.fractal-design.com/products/cases/north/" %> case.</dd>
+    <dt>Monitor: <%= link_to "LG DualUp", "https://www.lg.com/uk/monitors/ergo-monitors/28mq780-b/" %></dt>
+    <dd>I find the unusual aspect ratio of this screen almost perfect for software development; it
+      feels much more natural than a super-wide screen, but provides the added screen real estate
+      over a smaller or laptop screen. You can also display two inputs side by side, which is
+      occasionally useful.</dd>
+    <dt>Keyboard: <%= link_to "X-Bows Lite", "https://x-bows.com/products/x-bows-lite-ergonomic-mechanical-keyboard" %></dt>
+    <dd>This keyboard is the best compromise I’ve found between a traditional layout and the more
+      radical ergonomic designs available. There are probably better keyboards out there, in terms
+      of ergonomics and efficiency, but they come with the downside of making it harder to use
+      other keyboards. The changes <em>here</em> are subtle enough they don’t make other keyboards
+      unusable, but effective enough to vastly improve the experience—particularly being able
+      to hit Control and Shift with a thumb (a particularly useful feature when I used to use Emacs).</dd>
+  </dl>
 
   <h3>Development environment</h3>
 
   <dl>
-    <dt>Neovim</dt>
-    <dd>The centrepiece</dd>
-    <dt>tmux</dt>
-    <dd></dd>
+    <dt>Editor: <%= link_to "Neovim", "https://neovim.io/" %></dt>
+    <dd>One of the best investments of time in my career so far has been making myself familiar
+      with vi keybindings. Once they’re ingrained in your head, they make moving around in your
+      code feel natural and fast. Neovim adds to that foundation by providing a modern extension
+      language (Lua) to replace the… esoteric… Vimscript which has fostered a powerful plugin
+      system. Modern LSPs alongside innovations such as Treesitter give Neovim IDE-like power
+      while retaining all the benefits of a lightweight text editor.</dd>
+    <dt>Multiplexer: <%= link_to "tmux", "https://github.com/tmux/tmux/wiki" %></dt>
+    <dd>I use only the small subset of tmux functionality that serves my needs, but it does so
+      exceedingly well. It allows me to run multiple applications in a single terminal emulator
+      and switch between them easily, run a persistent session over SSH, and
+    <%= link_to "pair remotely", blog_post_path("pairing-with-tmux") %>.</dd>
+    <dt>OS: <%= link_to "openSUSE", "https://www.opensuse.org/" %></dt>
+    <dd>I’ve jumped around a lot in the past between different Linux distributions, and the BSDs.
+      Currently, I’m running openSUSE Tumbleweed, which is a rolling release that seems to do
+      a good job of balancing stability with bleeding edge software.</dd>
+    <dt>Window manager: <%= link_to "Hyprland", "https://hyprland.org/" %></dt>
+    <dd>I’m a big fan of tiling window managers, which tend to just get out of your way and let
+      you work. Now that the Linux world is moving from X11 to Wayland, I’m using Hyprland. It
+      lets me move around windows with vi keybindings and adds <em>just</em> enough animation
+      to make things feel smooth and stylish.</dd>
   </dl>
 
   <h3>Self-hosted</h3>
 
   <dl>
-    <dt>Wallabag</dt>
-    <dd></dd>
+    <dt><%= link_to "Wallabag", "https://wallabag.org/" %></dt>
+    <dd>In a similar vein to Pocket, or Instapaper: save articles to read later.</dd>
+    <dt><%= link_to "Immich", "https://immich.app/" %></dt>
+    <dd><em>Heavily</em> inspired by Google Photos, Immich is by far the best open source photo
+      management system I’ve seen, with a matching mobile app.</dd>
+    <dt><%= link_to "Forgejo", "https://forgejo.org/" %></dt>
+    <dd>I run an instance for my personal projects, as well as one for work.</dd>
+    <dt><%= link_to "Calibre-Web", "https://github.com/janeczku/calibre-web" %></dt>
+    <dd>Takes a Calibre library of ebooks and provides a nice web UI for them, making them
+      easily accessible from anywhere.</dd>
+    <dt><%= link_to "Radicale", "https://radicale.org/" %></dt>
+    <dd>CalDAV and CardDAV server for calendars and contacts. Pairs well with
+    <%= link_to "DAVx⁵", "https://www.davx5.com/" %> for syncing on Android.</dd>
   </dl>
 
   <h3>Other stuff</h3>
