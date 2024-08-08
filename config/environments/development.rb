@@ -51,4 +51,5 @@ Rails.application.configure do
     port: 1025,
   }
   config.action_controller.raise_on_missing_callback_actions = true
+  config.active_job.verbose_enqueue_logs = true
 end
