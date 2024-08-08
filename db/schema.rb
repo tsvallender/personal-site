@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_05_160037) do
+ActiveRecord::Schema[7.2].define(version: 2024_08_08_183404) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -95,14 +95,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_05_160037) do
     t.datetime "occurred_at"
     t.index ["diary_entry_id"], name: "index_exercises_on_diary_entry_id"
     t.index ["exercise_type_id"], name: "index_exercises_on_exercise_type_id"
-  end
-
-  create_table "feature_flags", force: :cascade do |t|
-    t.string "name", null: false
-    t.boolean "enabled", default: false, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_feature_flags_on_name", unique: true
   end
 
   create_table "learning_goals_tags", id: false, force: :cascade do |t|
