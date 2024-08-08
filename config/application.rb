@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 
 module Soc
   class Application < Rails::Application
-    config.load_defaults 7.1
+    config.load_defaults 7.2
 
     config.time_zone = "London"
     config.autoload_lib(ignore: %w(assets tasks))
