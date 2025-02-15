@@ -2,18 +2,14 @@ service: soc
 
 image: tsvallender/soc
 
-traefik:
-  host_port: 8000
-  args:
-    entryPoints.web.address: ':80'
-    entryPoints.web.forwardedHeaders.trustedIPs: 0.0.0.0/0
-  options:
-    network: kamal
+load_balancer:
+  host: kernighan
+  arch: arm64
 
 servers:
   web:
     hosts:
-      - tsvallender.co.uk
+      - www.tsvallender.co.uk
     options:
       network: kamal
 
@@ -35,21 +31,17 @@ env:
     - RAILS_MASTER_KEY
     - POSTGRES_PASSWORD
 
-ssh:
-  user: kamal
-
 builder:
   args:
     APPLICATION_HOST: tsvallender.co.uk
     RUBY_VERSION: 3.3.4
-  remote:
-    arch: arm64
-    host: ssh://kamal@tsvallender.co.uk
+  arch: arm64
+  remote: ssh://kamal@tsvallender.co.uk
 
 accessories:
   postgres:
     image: postgres:16
-    host: tsvallender.co.uk
+    host: www.tsvallender.co.uk
     env:
       clear:
         POSTGRES_USER: soc

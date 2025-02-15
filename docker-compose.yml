@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:17.3
+    volumes:
+      - soc-postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER}"]
+      interval: 5s
+      timeout: 60s
+      retries: 5
+      start_period: 80s
+
+volumes:
+  soc-postgres:
